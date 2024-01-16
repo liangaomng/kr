@@ -67,7 +67,7 @@ class SymbolicLayer(nn.Module):
         return self.W.clone()
 
 
-class (nn.Module):
+class SymbolicNet(nn.Module):
     """Symbolic regression network with multiple layers. Produces one output."""
     def __init__(self, symbolic_depth, funcs=None, initial_weights=None, init_stddev=0.1):
         super(SymbolicNet, self).__init__()
@@ -108,7 +108,7 @@ class (nn.Module):
                [self.output_weight.clone()]
 
 
-class (SymbolicLayer):
+class SymbolicLayerL0(SymbolicLayer):
     def __init__(self, in_dim=None, funcs=None, initial_weight=None, init_stddev=0.1,
                  bias=False, droprate_init=0.5, lamba=1.,
                  beta=2 / 3, gamma=-0.1, zeta=1.1, epsilon=1e-6):
